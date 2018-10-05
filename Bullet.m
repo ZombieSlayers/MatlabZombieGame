@@ -74,18 +74,18 @@ classdef Bullet < handle
         function flag = has_hit_boundary(obj, game_obj)
             % checks if the bullet has hit a bound of the game display; returns 1 if yes, 0 if not
             flag = 0;
-            if obj.position(1)<=0
+            if obj.position(1)<=0 || obj.position(1)>=game_obj.size(1) || obj.position(2)<=0 ||obj.position(2)>=game_obj.size(2) 
                 flag = 1;
             end
-            if obj.position(1)>=game_obj.size(1)
-                flag = 1;
-            end
-            if obj.position(2)<=0
-                flag = 1;
-            end
-            if obj.position(2)>=game_obj.size(2)
-                flag = 1;
-            end
+            % if obj.position(1)>=game_obj.size(1)
+            %     flag = 1;
+            % end
+            % if obj.position(2)<=0
+            %     flag = 1;
+            % end
+            % if obj.position(2)>=game_obj.size(2)
+            %     flag = 1;
+            % end
             
             
         end
