@@ -78,7 +78,7 @@ function zombie_game
  
 
         % bullets already existing keep moving
-        i_bullet = 1;
+        i_bullet = 1; % initialize the index for first bullet
         while i_bullet <= bullet_sequence_order 
             bullets{i_bullet}.simple_shooting(h_game, zombie_one, rickgrimes);
             h_bullets{i_bullet}.Visible = 'off';
