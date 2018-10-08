@@ -50,7 +50,7 @@ function zombie_game
     % initialize bullet container
     bullets = {};
     h_bullets = {}; % initialize container for bullets' handles
-    max_num_bullets = 1; 
+    max_num_bullets = 3; 
 
 
     % initialize exit flag to zero
