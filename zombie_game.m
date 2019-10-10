@@ -124,7 +124,9 @@ function zombie_game
                 bullet_sequence_order = bullet_sequence_order + 1; % add a new instances of bullet                
                 bullets{bullet_sequence_order} = Bullet(ib, rickgrimes.position, db, sb, fb); % create new bullet and add it to the list of bullets
 
-                bullets{bullet_sequence_order}.simple_shooting(h_game, zombie_one, rickgrimes);            
+                bullets{bullet_sequence_order}.simple_shooting(h_game, zombie_one, rickgrimes);
+				[iwillkillyousound, iwky_frames_per_second] = audioread('sounds/shot.mp3');
+				sound(iwillkillyousound, iwky_frames_per_second);			
                 % bullets{bullet_sequence_order}.shooting(h_game, zombie_one, rickgrimes);
                 h_bullets{bullet_sequence_order}.Visible = 'off';
                 h_bullets{bullet_sequence_order} = bullets{bullet_sequence_order}.bullet_on_game_board; % create handle for this new bulllet
